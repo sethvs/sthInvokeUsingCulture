@@ -225,86 +225,6 @@ SYNOPSIS
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
-      <command:name>Reset-sthCulture</command:name>
-      <command:verb>Reset</command:verb>
-      <command:noun>sthCulture</command:noun>
-      <maml:description>
-        <maml:para>Возвращает региональные настройки.</maml:para>
-      </maml:description>
-    </command:details>
-    <maml:description>
-      <maml:para>Функция возвращает региональные настройки для текущей сессии к изначальному значению.</maml:para>
-    </maml:description>
-    <command:syntax>
-      <command:syntaxItem>
-        <maml:name>Reset-sthCulture</maml:name>
-      </command:syntaxItem>
-    </command:syntax>
-    <command:parameters />
-    <command:inputTypes>
-      <command:inputType>
-        <dev:type>
-          <maml:name>None</maml:name>
-        </dev:type>
-        <maml:description>
-          <maml:para></maml:para>
-        </maml:description>
-      </command:inputType>
-    </command:inputTypes>
-    <command:returnValues>
-      <command:returnValue>
-        <dev:type>
-          <maml:name>System.Object</maml:name>
-        </dev:type>
-        <maml:description>
-          <maml:para></maml:para>
-        </maml:description>
-      </command:returnValue>
-    </command:returnValues>
-    <maml:alertSet>
-      <maml:alert>
-        <maml:para></maml:para>
-      </maml:alert>
-    </maml:alertSet>
-    <command:examples>
-      <command:example>
-        <maml:title>Пример 1: Возвращение региональных настроек к первоначальному значению</maml:title>
-        <dev:code>Get-Culture
-
-LCID             Name             DisplayName
-----             ----             -----------
-1033             en-US            English (United States)
-
-Set-sthCulture -Culture fr-FR
-
-Get-Culture
-
-LCID             Name             DisplayName
-----             ----             -----------
-1036             fr-FR            French (France)
-
-Reset-sthCulture
-
-Get-Culture
-
-LCID             Name             DisplayName
-----             ----             -----------
-1033             en-US            English (United States)</dev:code>
-        <dev:remarks>
-          <maml:para>Первая команда получает текущие региональные настройки. Сейчас это en-US.
-Вторая команда изменяет их на fr-FR для текущей сессии.
-Третья команда получает текущие региональные настройки. Сейчас это fr-FR.
-Четвертая команда возвращает их к первоначальному значению.
-Третья команда получает текущие региональные настройки. Сейчас это снова en-US.</maml:para>
-          <maml:para/>
-          <maml:para/>
-        </dev:remarks>
-      </command:example>
-    </command:examples>
-    <command:relatedLinks />
-  </command:command>
-  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
-    <command:details>
       <command:name>Set-sthCulture</command:name>
       <command:verb>Set</command:verb>
       <command:noun>sthCulture</command:noun>
@@ -384,6 +304,86 @@ LCID             Name             DisplayName
         <dev:remarks>
           <maml:para>Первая команда изменяет текущие региональные настройки на de-DE.
 Вторая команда использует оператор -f для форматирования значения.</maml:para>
+          <maml:para/>
+          <maml:para/>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Reset-sthCulture</command:name>
+      <command:verb>Reset</command:verb>
+      <command:noun>sthCulture</command:noun>
+      <maml:description>
+        <maml:para>Возвращает региональные настройки.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Функция возвращает региональные настройки для текущей сессии к изначальному значению.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Reset-sthCulture</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>Пример 1: Возвращение региональных настроек к первоначальному значению</maml:title>
+        <dev:code>Get-Culture
+
+LCID             Name             DisplayName
+----             ----             -----------
+1033             en-US            English (United States)
+
+Set-sthCulture -Culture fr-FR
+
+Get-Culture
+
+LCID             Name             DisplayName
+----             ----             -----------
+1036             fr-FR            French (France)
+
+Reset-sthCulture
+
+Get-Culture
+
+LCID             Name             DisplayName
+----             ----             -----------
+1033             en-US            English (United States)</dev:code>
+        <dev:remarks>
+          <maml:para>Первая команда получает текущие региональные настройки. Сейчас это en-US.
+Вторая команда изменяет их на fr-FR для текущей сессии.
+Третья команда получает текущие региональные настройки. Сейчас это fr-FR.
+Четвертая команда возвращает их к первоначальному значению.
+Третья команда получает текущие региональные настройки. Сейчас это снова en-US.</maml:para>
           <maml:para/>
           <maml:para/>
         </dev:remarks>
