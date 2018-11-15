@@ -37,8 +37,6 @@ function Enter-sthCulture
     [System.Threading.Thread]::CurrentThread.CurrentCulture = $Culture
     [System.Threading.Thread]::CurrentThread.CurrentUICulture = $Culture
 
-    # Set-Content -Path function:/prompt -Value {"[$($Culture.Name)] PS $($executionContext.SessionState.Path.CurrentLocation)$('>' * ($nestedPromptLevel + 1)) "}
-
     $PromptLine = "`"[`$(`$Culture.Name)] PS `$(`$executionContext.SessionState.Path.CurrentLocation)`$('>' * (`$nestedPromptLevel + 1)) `""
     $Prompt = [scriptblock]::Create($PromptLine)
     Set-Content -Path function:/prompt -Value $Prompt

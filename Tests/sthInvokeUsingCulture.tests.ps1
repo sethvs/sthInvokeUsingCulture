@@ -2,7 +2,7 @@ Remove-Module -Name sthInvokeUsingCulture -Force -ErrorAction 'SilentlyContinue'
 Import-Module "$PSScriptRoot\..\sthInvokeUsingCulture.psd1"
 
 Describe "sthInvokeUsingCulture" {
-    
+
     Write-Host "$($PSVersionTable.PSVersion)" 
     BeforeAll {
         $en = [System.Globalization.CultureInfo]'en-US'
