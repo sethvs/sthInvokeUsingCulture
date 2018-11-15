@@ -12,13 +12,13 @@ Invoke command using specified culture
 
 ## sthInvokeUsingCulture Cmdlets
 ### [Enter-sthCulture](Enter-sthCulture.md)
-Enters the specified culture 'scope'.
+Enters specified culture 'scope'.
 
 ### [Invoke-sthUsingCulture](Invoke-sthUsingCulture.md)
 Invokes command using specified culture.
 
 ### [Set-sthCulture](Set-sthCulture.md)
-Sets the specified culture for the current session.
+Sets specified culture for the current session.
 
 ### [Reset-sthCulture](Reset-sthCulture.md)
 Resets culture for the current session to its original value.
