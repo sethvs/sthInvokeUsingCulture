@@ -1,3 +1,4 @@
+# .ExternalHelp sthInvokeUsingCulture.help.xml
 function Invoke-sthUsingCulture
 {
     Param(
@@ -21,6 +22,7 @@ function Invoke-sthUsingCulture
     }
 }
 
+# .ExternalHelp sthInvokeUsingCulture.help.xml
 function Enter-sthCulture
 {
     Param(
@@ -49,6 +51,7 @@ function Enter-sthCulture
     [System.Threading.Thread]::CurrentThread.CurrentUICulture = $CurrentUICulture
 }
 
+# .ExternalHelp sthInvokeUsingCulture.help.xml
 function Set-sthCulture
 {
     Param(
@@ -68,6 +71,7 @@ function Set-sthCulture
     [System.Threading.Thread]::CurrentThread.CurrentUICulture = $Culture
 }
 
+# .ExternalHelp sthInvokeUsingCulture.help.xml
 function Reset-sthCulture
 {
     if ($Script:_defaultCulture)
