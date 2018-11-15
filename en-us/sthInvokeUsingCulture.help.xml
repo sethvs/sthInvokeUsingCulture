@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Enter-sthCulture</command:name>
+      <command:verb>Enter</command:verb>
+      <command:noun>sthCulture</command:noun>
+      <maml:description>
+        <maml:para>Enters the specified culture 'scope'.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The function enters the specified culture 'scope'.</maml:para>
+      <maml:para>While in this 'scope', all commands invoke using this culture.</maml:para>
+      <maml:para>To exit, type 'exit'.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Enter-sthCulture</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Culture</maml:name>
+          <maml:Description>
+            <maml:para>Specifies the culture.</maml:para>
+            <maml:para>Parameters accepts CultureInfo objects, culture names, like 'en-us', or culture IDs, like 1033.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">CultureInfo</command:parameterValue>
+          <dev:type>
+            <maml:name>CultureInfo</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Culture</maml:name>
+        <maml:Description>
+          <maml:para>Specifies the culture.</maml:para>
+          <maml:para>Parameters accepts CultureInfo objects, culture names, like 'en-us', or culture IDs, like 1033.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">CultureInfo</command:parameterValue>
+        <dev:type>
+          <maml:name>CultureInfo</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: Enter the specified culture 'scope'</maml:title>
+        <dev:code>PS C:\&gt; Enter-sthCulture -Culture de-DE
+
+[de-DE] PS C:\&gt;&gt; "{0:n}" -f 1234567890
+
+1.234.567.890,00
+
+[de-DE] PS C:\&gt;&gt; exit
+
+PS C:\&gt;</dev:code>
+        <dev:remarks>
+          <maml:para>The first command enters the de-DE culture 'scope'.
+The second command uses -f operator to format the number.
+The third command exits the de-DE culture 'scope'.</maml:para>
+          <maml:para/>
+          <maml:para/>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Invoke-sthUsingCulture</command:name>
+      <command:verb>Invoke</command:verb>
+      <command:noun>sthUsingCulture</command:noun>
+      <maml:description>
+        <maml:para>Invokes command using specified culture.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The function invokes command using specified culture.</maml:para>
+      <maml:para>It doesn't change the current culture.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Invoke-sthUsingCulture</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Culture</maml:name>
+          <maml:Description>
+            <maml:para>Specifies the culture.</maml:para>
+            <maml:para>Parameters accepts CultureInfo objects, culture names, like 'en-us', or culture IDs, like 1033.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">CultureInfo</command:parameterValue>
+          <dev:type>
+            <maml:name>CultureInfo</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>ScriptBlock</maml:name>
+          <maml:Description>
+            <maml:para>Specifies the scriptblock.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">ScriptBlock</command:parameterValue>
+          <dev:type>
+            <maml:name>ScriptBlock</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Culture</maml:name>
+        <maml:Description>
+          <maml:para>Specifies the culture.</maml:para>
+          <maml:para>Parameters accepts CultureInfo objects, culture names, like 'en-us', or culture IDs, like 1033.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">CultureInfo</command:parameterValue>
+        <dev:type>
+          <maml:name>CultureInfo</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>ScriptBlock</maml:name>
+        <maml:Description>
+          <maml:para>Specifies the scriptblock.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">ScriptBlock</command:parameterValue>
+        <dev:type>
+          <maml:name>ScriptBlock</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: Invoke command using specified culture</maml:title>
+        <dev:code>Invoke-sthUsingCulture -Culture de-DE -ScriptBlock {"{0:n}" -f 1234567890}
+
+1.234.567.890,00</dev:code>
+        <dev:remarks>
+          <maml:para>The command invokes the scriptblock using culture de-DE.</maml:para>
+          <maml:para/>
+          <maml:para/>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 2: Invoke Get-Help command using specified culture</maml:title>
+        <dev:code>Invoke-sthUsingCulture -Culture ru-ru -ScriptBlock { Get-Help Enter-sthCulture }
+
+NAME
+    Enter-sthCulture
+
+SYNOPSIS
+    Входит в 'область' указанных региональных настроек.
+...
+</dev:code>
+        <dev:remarks>
+          <maml:para>The command invokes the Get-Help command for the Enter-sthCulture function using culture ru-RU.</maml:para>
+          <maml:para>If you have already invoked the Get-Help command for the function using default culture, and now the result of the aforementioned command still uses that default culture, just re-import the module, which contain the command you are getting help for, like this: Import-Module sthInvokeUsingCulture and invoke the command again.</maml:para>
+          <maml:para/>
+          <maml:para/>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Set-sthCulture</command:name>
+      <command:verb>Set</command:verb>
+      <command:noun>sthCulture</command:noun>
+      <maml:description>
+        <maml:para>Sets the culture.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The function sets the specified culture for the current session.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Set-sthCulture</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Culture</maml:name>
+          <maml:Description>
+            <maml:para>Specifies the culture.</maml:para>
+            <maml:para>Parameters accepts CultureInfo objects, culture names, like 'en-us', or culture IDs, like 1033.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">CultureInfo</command:parameterValue>
+          <dev:type>
+            <maml:name>CultureInfo</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Culture</maml:name>
+        <maml:Description>
+          <maml:para>Specifies the culture.</maml:para>
+          <maml:para>Parameters accepts CultureInfo objects, culture names, like 'en-us', or culture IDs, like 1033.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">CultureInfo</command:parameterValue>
+        <dev:type>
+          <maml:name>CultureInfo</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: Change the current culture</maml:title>
+        <dev:code>Set-sthCulture -Culture de-DE
+
+"{0:n}" -f 1234567890
+
+1.234.567.890,00</dev:code>
+        <dev:remarks>
+          <maml:para>The first command sets culture to de-DE for the current session.
+The second command uses -f operator to format the number.</maml:para>
+          <maml:para/>
+          <maml:para/>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Reset-sthCulture</command:name>
+      <command:verb>Reset</command:verb>
+      <command:noun>sthCulture</command:noun>
+      <maml:description>
+        <maml:para>Resets culture.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The function resets culture for the current session to its original value.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Reset-sthCulture</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: Reset culture to its original value</maml:title>
+        <dev:code>Get-Culture
+
+LCID             Name             DisplayName
+----             ----             -----------
+1033             en-US            English (United States)
+
+Set-sthCulture -Culture fr-FR
+
+Get-Culture
+
+LCID             Name             DisplayName
+----             ----             -----------
+1036             fr-FR            French (France)
+
+Reset-sthCulture
+
+Get-Culture
+
+LCID             Name             DisplayName
+----             ----             -----------
+1033             en-US            English (United States)</dev:code>
+        <dev:remarks>
+          <maml:para>The first command gets current culture. It is en-US.
+The second command changes culture to fr-FR for the current session.
+The third command gets current culture. Now it is fr-FR.
+The fourth command resets culture.
+The fifth command gets current culture. Now it is en-US again.</maml:para>
+          <maml:para/>
+          <maml:para/>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+</helpItems>

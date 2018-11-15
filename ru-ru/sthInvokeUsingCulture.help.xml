@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Enter-sthCulture</command:name>
+      <command:verb>Enter</command:verb>
+      <command:noun>sthCulture</command:noun>
+      <maml:description>
+        <maml:para>Входит в 'область' указанных региональных настроек.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Функция входит в 'область' указанных региональных настроек.</maml:para>
+      <maml:para>Во время нахождения в этой 'области', все вызванные команды выполняются с этими региональными настройками.</maml:para>
+      <maml:para>Для выхода, введите 'exit'.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Enter-sthCulture</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Culture</maml:name>
+          <maml:Description>
+            <maml:para>Указывает региональные настройки.</maml:para>
+            <maml:para>В качестве значения параметр принимает объекты CultureInfo, имена, такие как 'en-US' или идентификаторы, такие как 1033, региональных настроек.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">CultureInfo</command:parameterValue>
+          <dev:type>
+            <maml:name>CultureInfo</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Culture</maml:name>
+        <maml:Description>
+          <maml:para>Указывает региональные настройки.</maml:para>
+          <maml:para>В качестве значения параметр принимает объекты CultureInfo, имена, такие как 'en-US' или идентификаторы, такие как 1033, региональных настроек.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">CultureInfo</command:parameterValue>
+        <dev:type>
+          <maml:name>CultureInfo</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>Пример 1: Вход в область указанных региональных настроек</maml:title>
+        <dev:code>PS C:\&gt; Enter-sthCulture -Culture de-DE
+
+[de-DE] PS C:\&gt;&gt; "{0:n}" -f 1234567890
+
+1.234.567.890,00
+
+[de-DE] PS C:\&gt;&gt; exit
+
+PS C:\&gt;</dev:code>
+        <dev:remarks>
+          <maml:para>Первая команда входит в область региональных настроек de-DE.
+Вторая команда использует оператор -f для форматирования значения.
+Третья команда выходит из области de-DE.</maml:para>
+          <maml:para/>
+          <maml:para/>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Invoke-sthUsingCulture</command:name>
+      <command:verb>Invoke</command:verb>
+      <command:noun>sthUsingCulture</command:noun>
+      <maml:description>
+        <maml:para>Выполняет команду с использованием указанных региональных настроек.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Функция выполняет команду с использованием указанных региональных настроек.</maml:para>
+      <maml:para>Текущие региональные настройки при этом не изменяются.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Invoke-sthUsingCulture</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Culture</maml:name>
+          <maml:Description>
+            <maml:para>Указывает региональные настройки.</maml:para>
+            <maml:para>В качестве значения параметр принимает объекты CultureInfo, имена, такие как 'en-US' или идентификаторы, такие как 1033, региональных настроек.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">CultureInfo</command:parameterValue>
+          <dev:type>
+            <maml:name>CultureInfo</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>ScriptBlock</maml:name>
+          <maml:Description>
+            <maml:para>Указывает скрипт-блок.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">ScriptBlock</command:parameterValue>
+          <dev:type>
+            <maml:name>ScriptBlock</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Culture</maml:name>
+        <maml:Description>
+          <maml:para>Указывает региональные настройки.</maml:para>
+          <maml:para>В качестве значения параметр принимает объекты CultureInfo, имена, такие как 'en-US' или идентификаторы, такие как 1033, региональных настроек.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">CultureInfo</command:parameterValue>
+        <dev:type>
+          <maml:name>CultureInfo</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>ScriptBlock</maml:name>
+        <maml:Description>
+          <maml:para>Указывает скрипт-блок.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">ScriptBlock</command:parameterValue>
+        <dev:type>
+          <maml:name>ScriptBlock</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>Пример 1: Выполнение команды с использованием указанных региональных настроек</maml:title>
+        <dev:code>Invoke-sthUsingCulture -Culture de-DE -ScriptBlock {"{0:n}" -f 1234567890}
+
+1.234.567.890,00</dev:code>
+        <dev:remarks>
+          <maml:para>Команда выполняет скрипт-блок с использованием региональных настроек de-DE.</maml:para>
+          <maml:para/>
+          <maml:para/>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Пример 2: Выполнение команды Get-Help с использованием указанных региональных настроек</maml:title>
+        <dev:code>Invoke-sthUsingCulture -Culture ru-ru -ScriptBlock { Get-Help Enter-sthCulture }
+
+NAME
+    Enter-sthCulture
+
+SYNOPSIS
+    Входит в 'область' указанных региональных настроек.
+...
+</dev:code>
+        <dev:remarks>
+          <maml:para>Команда выполняет команду Get-Help для функции Enter-sthCulture с использованием региональных настроек ru-RU.</maml:para>
+          <maml:para>Если ранее вы уже использовали команду Get-Help для функции с использованием региональных настроек по умолчанию и теперь вышеприведенная команда возвращает результат в соответствии с этими настройками по умолчанию вместо указанных, просто реимпортируйте модуль в который входит функция, для которой вы получаете справочную информацию, например, так: Import-Module sthInvokeUsingCulture и вызовите команду еще раз.</maml:para>
+          <maml:para/>
+          <maml:para/>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Set-sthCulture</command:name>
+      <command:verb>Set</command:verb>
+      <command:noun>sthCulture</command:noun>
+      <maml:description>
+        <maml:para>Задает региональные настройки.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Функция задает указанные региональные настройки для текущей сессии.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Set-sthCulture</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Culture</maml:name>
+          <maml:Description>
+            <maml:para>Указывает региональные настройки.</maml:para>
+            <maml:para>В качестве значения параметр принимает объекты CultureInfo, имена, такие как 'en-US' или идентификаторы, такие как 1033, региональных настроек.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">CultureInfo</command:parameterValue>
+          <dev:type>
+            <maml:name>CultureInfo</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Culture</maml:name>
+        <maml:Description>
+          <maml:para>Указывает региональные настройки.</maml:para>
+          <maml:para>В качестве значения параметр принимает объекты CultureInfo, имена, такие как 'en-US' или идентификаторы, такие как 1033, региональных настроек.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">CultureInfo</command:parameterValue>
+        <dev:type>
+          <maml:name>CultureInfo</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>Пример 1: Изменение текущих региональных настроек</maml:title>
+        <dev:code>Set-sthCulture -Culture de-DE
+
+"{0:n}" -f 1234567890
+
+1.234.567.890,00</dev:code>
+        <dev:remarks>
+          <maml:para>Первая команда изменяет текущие региональные настройки на de-DE.
+Вторая команда использует оператор -f для форматирования значения.</maml:para>
+          <maml:para/>
+          <maml:para/>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Reset-sthCulture</command:name>
+      <command:verb>Reset</command:verb>
+      <command:noun>sthCulture</command:noun>
+      <maml:description>
+        <maml:para>Возвращает региональные настройки.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Функция возвращает региональные настройки для текущей сессии к изначальному значению.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Reset-sthCulture</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>Пример 1: Возвращение региональных настроек к изначальному значению</maml:title>
+        <dev:code>Get-Culture
+
+LCID             Name             DisplayName
+----             ----             -----------
+1033             en-US            English (United States)
+
+Set-sthCulture -Culture fr-FR
+
+Get-Culture
+
+LCID             Name             DisplayName
+----             ----             -----------
+1036             fr-FR            French (France)
+
+Reset-sthCulture
+
+Get-Culture
+
+LCID             Name             DisplayName
+----             ----             -----------
+1033             en-US            English (United States)</dev:code>
+        <dev:remarks>
+          <maml:para>Первая команда получает текущие региональные настройки. Сейчас это en-US.
+Вторая команда изменяет их на fr-FR для текущей сессии.
+Третья команда получает текущие региональные настройки. Сейчас это fr-FR.
+Четвертая команда возвращает их к первоначальному значению.
+Пятая команда получает текущие региональные настройки. Сейчас это снова en-US.</maml:para>
+          <maml:para/>
+          <maml:para/>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+</helpItems>

@@ -1,3 +1,4 @@
+# .ExternalHelp sthInvokeUsingCulture.help.xml
 function Invoke-sthUsingCulture
 {
     Param(
@@ -21,6 +22,7 @@ function Invoke-sthUsingCulture
     }
 }
 
+# .ExternalHelp sthInvokeUsingCulture.help.xml
 function Enter-sthCulture
 {
     Param(
@@ -35,8 +37,6 @@ function Enter-sthCulture
     [System.Threading.Thread]::CurrentThread.CurrentCulture = $Culture
     [System.Threading.Thread]::CurrentThread.CurrentUICulture = $Culture
 
-    # Set-Content -Path function:/prompt -Value {"[$($Culture.Name)] PS $($executionContext.SessionState.Path.CurrentLocation)$('>' * ($nestedPromptLevel + 1)) "}
-
     $PromptLine = "`"[`$(`$Culture.Name)] PS `$(`$executionContext.SessionState.Path.CurrentLocation)`$('>' * (`$nestedPromptLevel + 1)) `""
     $Prompt = [scriptblock]::Create($PromptLine)
     Set-Content -Path function:/prompt -Value $Prompt
@@ -49,6 +49,7 @@ function Enter-sthCulture
     [System.Threading.Thread]::CurrentThread.CurrentUICulture = $CurrentUICulture
 }
 
+# .ExternalHelp sthInvokeUsingCulture.help.xml
 function Set-sthCulture
 {
     Param(
@@ -68,6 +69,7 @@ function Set-sthCulture
     [System.Threading.Thread]::CurrentThread.CurrentUICulture = $Culture
 }
 
+# .ExternalHelp sthInvokeUsingCulture.help.xml
 function Reset-sthCulture
 {
     if ($Script:_defaultCulture)
