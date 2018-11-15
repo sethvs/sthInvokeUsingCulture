@@ -77,16 +77,16 @@
         <maml:title>Example 1: Enter the specified culture 'scope'</maml:title>
         <dev:code>PS C:\&gt; Enter-sthCulture -Culture de-DE
 
-[de-DE] PS C:\&gt;&gt; "{0:c}" -f 15
+[de-DE] PS C:\&gt;&gt; "{0:n}" -f 1234567890
 
-15,00 €
+1.234.567.890,00
 
 [de-DE] PS C:\&gt;&gt; exit
 
 PS C:\&gt;</dev:code>
         <dev:remarks>
           <maml:para>The first command enters the de-DE culture 'scope'.
-The second command uses -f operator to format number as currency.
+The second command uses -f operator to format the number.
 The third command exits the de-DE culture 'scope'.</maml:para>
           <maml:para/>
           <maml:para/>
@@ -193,9 +193,9 @@ The third command exits the de-DE culture 'scope'.</maml:para>
     <command:examples>
       <command:example>
         <maml:title>Example 1: Invoke command using specified culture</maml:title>
-        <dev:code>Invoke-sthUsingCulture -Culture de-DE -ScriptBlock {"{0:c}" -f 15}
+        <dev:code>Invoke-sthUsingCulture -Culture de-DE -ScriptBlock {"{0:n}" -f 1234567890}
 
-15,00 €</dev:code>
+1.234.567.890,00</dev:code>
         <dev:remarks>
           <maml:para>The command invokes the scriptblock using culture de-DE.</maml:para>
           <maml:para/>
@@ -377,11 +377,13 @@ The fifth command gets current culture. Now it is en-US again.</maml:para>
       <command:example>
         <maml:title>Example 1: Change the current culture</maml:title>
         <dev:code>Set-sthCulture -Culture de-DE
-"{0:c}" -f 15
-15,00 €</dev:code>
+
+"{0:n}" -f 1234567890
+
+1.234.567.890,00</dev:code>
         <dev:remarks>
           <maml:para>The first command sets culture to de-DE for the current session.
-The second command uses -f operator to format number as currency.</maml:para>
+The second command uses -f operator to format the number.</maml:para>
           <maml:para/>
           <maml:para/>
         </dev:remarks>

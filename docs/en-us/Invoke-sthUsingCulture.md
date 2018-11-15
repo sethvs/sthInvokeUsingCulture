@@ -67,9 +67,9 @@ Accept wildcard characters: False
 
 ### Example 1: Invoke command using specified culture
 ```powershell
-Invoke-sthUsingCulture -Culture de-DE -ScriptBlock {"{0:c}" -f 15}
+Invoke-sthUsingCulture -Culture de-DE -ScriptBlock {"{0:n}" -f 1234567890}
 
-15,00 €
+1.234.567.890,00
 ```
 
 The command invokes the scriptblock using culture de-DE.

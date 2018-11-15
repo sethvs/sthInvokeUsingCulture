@@ -77,16 +77,16 @@
         <maml:title>Пример 1: Вход в область указанных региональных настроек</maml:title>
         <dev:code>PS C:\&gt; Enter-sthCulture -Culture de-DE
 
-[de-DE] PS C:\&gt;&gt; "{0:c}" -f 15
+[de-DE] PS C:\&gt;&gt; "{0:n}" -f 1234567890
 
-15,00 €
+1.234.567.890,00
 
 [de-DE] PS C:\&gt;&gt; exit
 
 PS C:\&gt;</dev:code>
         <dev:remarks>
           <maml:para>Первая команда входит в область региональных настроек de-DE.
-Вторая команда использует оператор -f для форматирования значения 15 в виде денежных единиц.
+Вторая команда использует оператор -f для форматирования значения.
 Третья команда выходит из области de-DE.</maml:para>
           <maml:para/>
           <maml:para/>
@@ -193,9 +193,9 @@ PS C:\&gt;</dev:code>
     <command:examples>
       <command:example>
         <maml:title>Пример 1: Выполнение команды с использованием указанных региональных настроек</maml:title>
-        <dev:code>Invoke-sthUsingCulture -Culture de-DE -ScriptBlock {"{0:c}" -f 15}
+        <dev:code>Invoke-sthUsingCulture -Culture de-DE -ScriptBlock {"{0:n}" -f 1234567890}
 
-15,00 €</dev:code>
+1.234.567.890,00</dev:code>
         <dev:remarks>
           <maml:para>Команда выполняет скрипт-блок с использованием региональных настроек de-DE.</maml:para>
           <maml:para/>
@@ -377,11 +377,13 @@ LCID             Name             DisplayName
       <command:example>
         <maml:title>Пример 1: Изменение текущих региональных настроек</maml:title>
         <dev:code>Set-sthCulture -Culture de-DE
-"{0:c}" -f 15
-15,00 €</dev:code>
+
+"{0:n}" -f 1234567890
+
+1.234.567.890,00</dev:code>
         <dev:remarks>
-          <maml:para>Первая команд изменяет текущие региональные настройки на de-DE.
-Вторая команда использует оператор -f для форматирования значения 15 в виде денежных единиц.</maml:para>
+          <maml:para>Первая команда изменяет текущие региональные настройки на de-DE.
+Вторая команда использует оператор -f для форматирования значения.</maml:para>
           <maml:para/>
           <maml:para/>
         </dev:remarks>

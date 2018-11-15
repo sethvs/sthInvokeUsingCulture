@@ -52,11 +52,13 @@ Accept wildcard characters: False
 ### Example 1: Change the current culture
 ```powershell
 Set-sthCulture -Culture de-DE
-"{0:c}" -f 15
-15,00 €
+
+"{0:n}" -f 1234567890
+
+1.234.567.890,00
 ```
 
 The first command sets culture to de-DE for the current session.\
-The second command uses -f operator to format number as currency.
+The second command uses -f operator to format the number.
 
 ## RELATED LINKS

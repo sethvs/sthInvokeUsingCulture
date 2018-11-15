@@ -57,9 +57,9 @@ Accept wildcard characters: False
 ```powershell
 PS C:\> Enter-sthCulture -Culture de-DE
 
-[de-DE] PS C:\>> "{0:c}" -f 15
+[de-DE] PS C:\>> "{0:n}" -f 1234567890
 
-15,00 €
+1.234.567.890,00
 
 [de-DE] PS C:\>> exit
 
@@ -67,7 +67,7 @@ PS C:\>
 ```
 
 The first command enters the de-DE culture 'scope'.\
-The second command uses -f operator to format number as currency.\
+The second command uses -f operator to format the number.\
 The third command exits the de-DE culture 'scope'.
 
 ## RELATED LINKS

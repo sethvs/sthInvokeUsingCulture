@@ -68,9 +68,9 @@ Accept wildcard characters: False
 
 ### Пример 1: Выполнение команды с использованием указанных региональных настроек
 ```powershell
-Invoke-sthUsingCulture -Culture de-DE -ScriptBlock {"{0:c}" -f 15}
+Invoke-sthUsingCulture -Culture de-DE -ScriptBlock {"{0:n}" -f 1234567890}
 
-15,00 €
+1.234.567.890,00
 ```
 
 Команда выполняет скрипт-блок с использованием региональных настроек de-DE.
