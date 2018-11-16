@@ -1,7 +1,12 @@
-$ModuleName = 'sthInvokeUsingCulture'
+Param (
+    $ReleaseDefinitionName,
+    $ReleasePrimaryArtifactSourceAlias,
+    $SystemDefaultWorkingDirectory,
+    $NuGetApiKey
+)
 
-$SourcePath = Join-Path -Path $(System.DefaultWorkingDirectory) -ChildPath "_$ModuleName"
-$ModulePath = Join-Path -Path $(System.DefaultWorkingDirectory) -ChildPath $ModuleName
+$SourcePath = Join-Path -Path $SystemDefaultWorkingDirectory -ChildPath $ReleasePrimaryArtifactSourceAlias
+$ModulePath = Join-Path -Path $SystemDefaultWorkingDirectory -ChildPath $ReleaseDefinitionName
 
 New-Item -ItemType Directory -Path $ModulePath | Out-Null
 Copy-Item -Path $SourcePath\* -Include *.psd1, *.psm1, *.ps1,*.ps1xml -Exclude *_* -Destination $ModulePath
@@ -10,4 +15,4 @@ Copy-Item -Path $SourcePath\en-us -Destination $ModulePath -Exclude *_* -Recurse
 Copy-Item -Path $SourcePath\ru-ru -Destination $ModulePath -Exclude *_* -Recurse
 
 Update-Module -Name PowerShellGet -Force
-Publish-Module -Path $ModulePath -NuGetApiKey $(NuGetApiKey) -Verbose
+Publish-Module -Path $ModulePath -NuGetApiKey $NuGetApiKey -Verbose
