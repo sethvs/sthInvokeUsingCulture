@@ -8,7 +8,7 @@ Locale: en-us
 
 # sthInvokeUsingCulture Module
 ## Description
-Invoke command using specified culture
+Invoke commands using specified culture
 
 ## sthInvokeUsingCulture Cmdlets
 ### [Enter-sthCulture](Enter-sthCulture.md)
