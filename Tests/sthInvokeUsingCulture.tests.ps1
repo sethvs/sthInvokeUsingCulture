@@ -3,7 +3,6 @@ Import-Module "$PSScriptRoot\..\sthInvokeUsingCulture.psd1"
 
 Describe "sthInvokeUsingCulture" {
 
-    Write-Host "$($PSVersionTable.PSVersion)" 
     BeforeAll {
         $en = [System.Globalization.CultureInfo]'en-US'
         $en_name = 'en-US'
@@ -67,6 +66,25 @@ Describe "sthInvokeUsingCulture" {
 
                 Param ($Culture, $Result)
                 Invoke-sthUsingCulture -Culture $Culture -ScriptBlock $ScriptBlock | Should -BeExactly $Result
+            }
+        }
+
+        Context "Getting help using culture" {
+
+            It "Should get help for Enter-sthCulture in en-US" {
+                Invoke-sthUsingCulture -Culture 'en-US' -ScriptBlock {Get-Help Enter-sthCulture} | 
+                    Out-String -Stream | 
+                    Select-Object -Index 5 | 
+                    Should -BeExactly "    $($result.helpline_en)"
+            }
+
+            Import-Module "$PSScriptRoot\..\sthInvokeUsingCulture.psd1"
+
+            It "Should get help for Enter-sthCulture in ru-RU" {
+                Invoke-sthUsingCulture -Culture 'ru-RU' -ScriptBlock {Get-Help Enter-sthCulture} | 
+                    Out-String -Stream | 
+                    Select-Object -Index 5 | 
+                    Should -BeExactly "    $($result.helpline_ru)"
             }
         }
     }
