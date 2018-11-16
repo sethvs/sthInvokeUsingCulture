@@ -12,7 +12,7 @@
 RootModule = 'sthInvokeUsingCulture.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.8'
+ModuleVersion = '1.0'
 
 # Supported PSEditions
 CompatiblePSEditions = @('Desktop', 'Core')
@@ -30,7 +30,7 @@ CompanyName = 'Unknown'
 Copyright = '(c) Sergey Vasin. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'Invoke command using specified culture'
+Description = 'Invoke commands using specified culture'
 
 # Minimum version of the PowerShell engine required by this module
 PowerShellVersion = '5.1'
@@ -87,7 +87,9 @@ AliasesToExport = @()
 # ModuleList = @()
 
 # List of all files packaged with this module
-# FileList = @()
+FileList = 'sthInvokeUsingCulture.psd1', 'sthInvokeUsingCulture.psm1', 'sthInvokeUsingCultureFunctions.ps1', 
+               'en-us\sthInvokeUsingCulture.help.xml', 'ru-ru\sthInvokeUsingCulture.help.xml',
+               'Tests\sthInvokeUsingCulture.tests.ps1', 'Tests\sthInvokeUsingCulture.tests.data.psd1'
 
 # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
 PrivateData = @{
@@ -101,7 +103,7 @@ PrivateData = @{
         # LicenseUri = ''
 
         # A URL to the main website for this project.
-        # ProjectUri = ''
+        ProjectUri = 'https://github.com/sethvs/sthInvokeUsingCulture'
 
         # A URL to an icon representing this module.
         # IconUri = ''
