@@ -1,7 +1,11 @@
-$ModuleName = 'sthInvokeUsingCulture'
+Param (
+    $ReleaseDefinitionName,
+    $ReleasePrimaryArtifactSourceAlias,
+    $SystemDefaultWorkingDirectory
+)
 
-$SourcePath = Join-Path -Path $(System.DefaultWorkingDirectory) -ChildPath "_$ModuleName"
-$ModulePath = Join-Path -Path $(System.DefaultWorkingDirectory) -ChildPath $ModuleName
+$SourcePath = Join-Path -Path $SystemDefaultWorkingDirectory -ChildPath $ReleasePrimaryArtifactSourceAlias
+$ModulePath = Join-Path -Path $SystemDefaultWorkingDirectory -ChildPath $ReleaseDefinitionName
 
 New-Item -ItemType Directory -Path $ModulePath | Out-Null
 Copy-Item -Path $SourcePath\* -Include *.psd1, *.psm1, *.ps1,*.ps1xml -Exclude *_* -Destination $ModulePath
